@@ -31,7 +31,7 @@
   document.querySelectorAll('[data-figure]').forEach(button => button.addEventListener('click', () => {
     const image = dialog.querySelector('.expanded-figure');
     image.src = button.dataset.figure;
-    image.alt = button.querySelector('img').alt;
+    image.alt = button.dataset.figureAlt || button.querySelector('img').alt;
     dialog.querySelector('#figure-caption').textContent = button.dataset.caption;
     dialog.querySelector('.figure-download').href = button.dataset.figure;
     dialog.showModal();
