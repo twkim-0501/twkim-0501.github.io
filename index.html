@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en" data-language="en">
-  <head>
+<html lang="en" data-language="en"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="김태우 · Taewoo Kim. KAIST 전산학부 석사과정. Human Motion, 3D Vision, Software Development.">
@@ -13,7 +12,7 @@
     <link rel="canonical" href="https://twkim-0501.github.io/">
     <title>김태우 · Taewoo Kim</title>
     <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260920-2">
   </head>
   <body>
     <a class="skip" href="#research">Skip to research</a>
@@ -38,7 +37,7 @@
             <a href="https://www.linkedin.com/in/taewoo-kim-412846435/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (new tab)</span></a>
           </nav>
         </div>
-        <img class="portrait" src="profile.jpg" width="3000" height="3858" alt="Taewoo Kim" fetchpriority="high">
+        <a class="portrait-link" href="profile.jpg" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution portrait of Taewoo Kim"><img class="portrait" src="profile.jpg" width="3000" height="3858" alt="Taewoo Kim" fetchpriority="high" decoding="async"></a>
       </header>
 
       <section id="research" aria-labelledby="research-title">
@@ -47,33 +46,53 @@
         <p class="section-intro" data-ko>사람의 움직임을 표현하는 모델과 데이터·시스템을 함께 다룹니다. 현재 진행 중인 연구와 대표 엔지니어링 프로젝트를 소개합니다.</p>
         <article class="research-row" id="body-to-hands">
           <figure class="research-figure">
-            <a class="mesh-pair" href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pf_qual" target="_blank" rel="noopener noreferrer" aria-label="View hand generation results in portfolio">
-              <div><img src="body-input.png" width="220" height="340" alt="Body motion input: taking a photo"><span>Body input</span></div>
-              <div><img src="hand-generation.png" width="560" height="560" alt="Generated left-hand pose from the physical model"><span>Generated hand</span></div>
+            <a class="hand-overview" href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pf_qual" target="_blank" rel="noopener noreferrer" aria-label="Body motion to hand generation: view actual research results in portfolio">
+              <div class="figure-flow"><div><img src="body-input.png" width="220" height="340" alt="Body motion input: taking a photo"><span>Body motion</span></div><span class="flow-arrow" aria-hidden="true">→</span><div><img src="hand-generation.png" width="545" height="545" alt="Generated left-hand pose from the evaluated physical model"><span>Generated hand</span></div></div>
+              <div class="cue-strip"><span>Joint</span><span>Part</span><span>Time</span><span class="cue-output">→ Diffusion</span></div>
             </a>
-            <figcaption>Body-to-hand motion generation</figcaption>
+            <figcaption data-en>Physical model · example from the portfolio</figcaption><figcaption data-ko>Physical 모델 · 포트폴리오의 실제 생성 예시</figcaption>
           </figure>
           <div class="research-copy">
             <h3><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_03" target="_blank" rel="noopener noreferrer">Learning What Matters in Body Motion for Hand Generation</a></h3>
             <p class="subtitle">Structured Kinematics and Body-Derived Semantics</p>
             <p class="research-meta"><strong>Taewoo Kim</strong> · KAIST NMAIL</p>
             <p class="research-status">Ongoing research, 2025–present <span>· Manuscript in preparation</span></p>
-            <p class="description" data-en>Generating wrist and finger motion with structured joint, body-part, and temporal cues. Current work explores body-derived semantic conditioning and transfer to text-conditioned hand generation.</p>
-            <p class="description" data-ko>관절·신체 부위·시간 범위별 단서를 활용해 손목과 손가락의 움직임을 생성합니다. 신체 동작에서 추론한 의미 정보와 텍스트 조건을 활용하는 생성 방식으로 확장하고 있습니다.</p>
+            <p class="description" data-en>I design diffusion models that complete missing hand motion from body-only sequences. Each hand joint selects relevant joint, body-part, and multi-scale temporal cues; an articulated decoder models wrist and finger motion together.</p>
+            <p class="description" data-ko>손 정보가 없는 신체 모션으로부터 양손 동작을 완성하는 Diffusion 모델을 설계합니다. 손 관절별로 관절·신체 부위·여러 시간 범위의 정보를 선택하고, 관절 구조를 반영한 디코더로 손목과 손가락을 함께 생성합니다.</p>
+            <p class="research-note" data-en>Individual research: model design, implementation, and evaluation on BEAT2 and Original-GRAB. Ongoing work investigates body-derived semantics and transfer to text-conditioned generation.</p>
+            <p class="research-note" data-ko>개인 연구로 모델 설계·구현과 BEAT2·Original-GRAB 평가를 수행했습니다. 신체 동작에서 추론한 의미 정보의 활용과 텍스트 조건 생성으로의 전이를 연구 중입니다.</p>
             <p class="work-links"><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_03" target="_blank" rel="noopener noreferrer">Overview</a><span>/</span><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pf_qual" target="_blank" rel="noopener noreferrer">Results</a></p>
           </div>
         </article>
         <article class="research-row" id="imu-animation">
           <figure class="research-figure">
-            <a class="motion-figure" href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.p2b_stability" target="_blank" rel="noopener noreferrer" aria-label="View IMU motion comparison in portfolio"><img src="imu-motion.png" width="720" height="640" loading="lazy" alt="K-IMU motion comparison: pretrained model and translation fine-tuning"></a>
-            <figcaption>IMU-based motion estimation</figcaption>
+            <a class="imu-overview" href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_08" target="_blank" rel="noopener noreferrer" aria-label="Four IMU sensors, motion estimation, and character animation: system overview">
+              <svg viewBox="0 0 480 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="imu-figure-title imu-figure-desc">
+                <title id="imu-figure-title">From four IMUs to character animation</title><desc id="imu-figure-desc">Conceptual system diagram. Four inertial sensors provide motion signals; calibration and a motion model reconstruct body motion, which supports 2D and 3D animation. Sensor symbols do not indicate placement.</desc>
+                <defs><marker id="arrowhead" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#8394a5" stroke-width="1.2"></path></marker></defs>
+                <rect width="480" height="300" rx="8" fill="#f5f8fa"></rect>
+                <g fill="#edf3f8" stroke="#95aec5" stroke-width="2"><rect x="38" y="51" width="32" height="39" rx="6"></rect><rect x="83" y="51" width="32" height="39" rx="6"></rect><rect x="38" y="103" width="32" height="39" rx="6"></rect><rect x="83" y="103" width="32" height="39" rx="6"></rect></g>
+                <g fill="#3975a3"><circle cx="54" cy="65" r="4"></circle><circle cx="99" cy="65" r="4"></circle><circle cx="54" cy="117" r="4"></circle><circle cx="99" cy="117" r="4"></circle></g>
+                <g stroke="#8394a5" stroke-width="2" fill="none" marker-end="url(#arrowhead)"><path d="M133 97H171"></path><path d="M300 97H341"></path></g>
+                <g fill="none" stroke="#467b9e" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><circle cx="235" cy="48" r="13" fill="#dce9f1"></circle><path d="M235 63V119M208 80L235 72L262 80M208 80L194 108M262 80L277 103M235 119L217 145L207 174M235 119L253 145L264 174"></path></g>
+                <g fill="#fff" stroke="#aabac8" stroke-width="1.8"><rect x="358" y="46" width="84" height="55" rx="5"></rect><path d="M400 112L430 129V162L400 179L370 162V129Z"></path></g>
+                <g stroke="#7894ab" fill="none" stroke-width="1.5"><path d="M370 129L400 146L430 129M400 146V179"></path><path d="M372 84L387 69L400 78L416 60L430 76"></path></g>
+                <g font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#334b60" text-anchor="middle"><text x="77" y="201">4 IMUs</text><text x="235" y="201">Body motion</text><text x="400" y="201">2D / 3D</text></g>
+                <path d="M26 223H454" stroke="#dce4ea"></path>
+                <g font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#637b8e" text-anchor="middle"><text x="87" y="254">Calibrate &amp; sync</text><text x="243" y="254">Estimate &amp; refine</text><text x="397" y="254">Animate</text></g>
+                <text x="240" y="282" font-family="Arial, Helvetica, sans-serif" font-size="11" fill="#81919f" text-anchor="middle">SYSTEM OVERVIEW</text>
+              </svg>
+            </a>
+            <figcaption data-en>System schematic · see portfolio for results</figcaption><figcaption data-ko>시스템 개요도 · 실제 결과는 포트폴리오에서 확인</figcaption>
           </figure>
           <div class="research-copy">
             <h3><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_08" target="_blank" rel="noopener noreferrer">From Sparse IMU Sensors to 2D/3D Character Animation</a></h3>
-            <p class="research-meta">KAIST NMAIL · Team project</p>
-            <p class="research-status">Research engineering, 2024–2025</p>
-            <p class="description" data-en>Worked on sensor calibration and synchronization, motion-model adaptation, and motion refinement. Connected motion representations to pose-guided video generation and contributed to 3D character animation.</p>
-            <p class="description" data-ko>센서 보정·동기화, 동작 추정 모델 적응과 모션 보정을 수행했습니다. 모션 표현을 포즈 조건부 영상 생성에 연결하고 3D 캐릭터 애니메이션 개발에 참여했습니다.</p>
+            <p class="research-meta">KAIST NMAIL · Team of 6</p>
+            <p class="research-status">Research engineering, Sep. 2024–Sep. 2025</p>
+            <p class="description" data-en>Developed data collection, calibration, and synchronization for four-IMU motion estimation with OptiTrack reference data. Adapted the motion model to real sensor data and investigated interpolation artifacts, jitter, and translation drift.</p>
+            <p class="description" data-ko>4개 IMU 기반 모션 추정을 위한 데이터 수집·센서 보정·시간 동기화와 OptiTrack 정답 데이터 정렬을 수행했습니다. 실측 센서 데이터로 모델을 적응시키고, 회전 보간 오류·떨림·이동 드리프트를 분석하고 개선했습니다.</p>
+            <p class="research-note" data-en>My contributions also include pose-guided video generation, a Gradio demo, and shared work on 3D character animation. Collaborated across sensor, model, and engine development.</p>
+            <p class="research-note" data-ko>포즈 조건부 영상 생성·Gradio 데모를 구현하고 3D 캐릭터 애니메이션 공동 개발에 참여했습니다. 센서·모델·엔진 개발 사이의 이슈를 연결해 해결 과정을 조율했습니다.</p>
             <p class="work-links"><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_08" target="_blank" rel="noopener noreferrer">Overview</a><span>/</span><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.p2b_stability" target="_blank" rel="noopener noreferrer">Motion results</a><span>/</span><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.p2x_2dtrain" target="_blank" rel="noopener noreferrer">Animation</a></p>
           </div>
         </article>
@@ -81,9 +100,19 @@
 
       <section id="experience" aria-labelledby="experience-title">
         <h2 id="experience-title">Experience</h2>
-        <div class="cv-row"><div><h3>KAIST NMAIL</h3><p data-en>Graduate Researcher <span class="muted">· Undergraduate research from Sep. 2024</span></p><p data-ko>석사과정 연구 <span class="muted">· 2024년 9월부터 학부 연구 참여</span></p></div><p class="dates">Sep. 2024 – Present</p></div>
-        <div class="cv-row"><div><h3>HayanMind <span class="muted">/ RedKiwi</span></h3><p>Frontend Developer · Intern &amp; Part-time</p><p class="detail" data-en>React Native UI development and JavaScript-to-TypeScript migration.</p><p class="detail" data-ko>React Native 앱 UI 개발과 JavaScript → TypeScript 전환.</p></div><p class="dates">Dec. 2021 – Jun. 2022</p></div>
-        <div class="cv-row"><div><h3>SPARCS <span class="muted">/ KAIST TAXI</span></h3><p>Frontend Developer</p><p class="detail" data-en>React-based account, settings, and chat features. Rejoined in Fall 2023.</p><p class="detail" data-ko>React 기반 마이페이지·설정·채팅 개발. 2023년 가을 재참여.</p></div><p class="dates">Fall 2021 – Spring 2022<br>Fall 2023</p></div>
+        <div class="cv-row"><div><h3>KAIST NMAIL</h3><p data-en>Graduate Researcher</p><p data-ko>석사과정 연구</p><p class="detail" data-en>Human motion generation, sensor-based motion estimation, and character animation.</p><p class="detail" data-ko>인체 동작 생성, 센서 기반 모션 추정과 캐릭터 애니메이션 연구.</p><p class="detail" data-en>Previously an undergraduate researcher, Sep. 2024–Feb. 2025.</p><p class="detail" data-ko>학부 연구 참여: 2024.09–2025.02.</p></div><p class="dates">Mar. 2025 – Present</p></div>
+        <div class="cv-row"><div><h3>KAIST ICLab</h3><p data-en>Research Intern · Wearable Sensing</p><p data-ko>연구 인턴 · 웨어러블 센싱</p><p class="detail" data-en>Built a Galaxy Watch sensor logger and designed wearable data processing for a stress study; contributed to study design and pilot procedures.</p><p class="detail" data-ko>스트레스 사용자 연구를 위한 Galaxy Watch 센서 로거와 데이터 처리 과정을 개발하고, 연구 설계·파일럿 실험 개선에 참여했습니다.</p><p class="detail" data-en>Research participation began in Fall 2023.</p><p class="detail" data-ko>2023년 가을부터 연구 참여.</p></div><p class="dates">Jan. – Feb. 2024</p></div>
+        <div class="cv-row"><div><h3>HayanMind <span class="muted">/ RedKiwi</span></h3><p>Frontend Developer</p><p class="role-period" data-en><strong>CUOP Intern</strong> · Dec. 2021–Feb. 2022<br><strong>Part-time Developer</strong> · approximately 4 months afterward</p><p class="role-period" data-ko><strong>CUOP 인턴</strong> · 2021.12–2022.02<br><strong>파트타임 개발자</strong> · 인턴 종료 후 약 4개월</p><p class="detail" data-en>Developed React Native UI components and the Word Map screen, and migrated JavaScript components to TypeScript. Continued part-time at the company’s invitation after the eight-week internship.</p><p class="detail" data-ko>React Native UI 컴포넌트·Word Map 화면을 개발하고 JavaScript 컴포넌트를 TypeScript로 전환했습니다. 8주 인턴십 이후 회사의 제안으로 파트타임 근무를 이어갔습니다.</p><p class="detail" data-en>Worked with a global team in English and maintained M1 development-environment documentation.</p><p class="detail" data-ko>영어로 글로벌 팀과 협업하며 M1 개발 환경 호환성 문제 해결과 문서 정비를 수행했습니다.</p></div><p class="dates">2021 – 2022</p></div>
+        <div class="cv-row"><div><h3>SPARCS <span class="muted">/ KAIST TAXI</span></h3><p>Frontend Developer</p><p class="detail" data-en>Built React-based account and settings pages, Socket-based chat, and API integrations for the campus taxi-sharing service. Collaborated with designers and backend developers.</p><p class="detail" data-ko>교내 택시 동승 서비스의 React 기반 마이페이지·설정, Socket 기반 채팅과 API 연동을 개발했습니다. 디자이너·백엔드 개발자와 협업했습니다.</p></div><p class="dates">Fall 2021 – Spring 2022<br>Fall 2023</p></div>
+      </section>
+
+      <section id="projects" aria-labelledby="projects-title">
+        <h2 id="projects-title">Selected Projects</h2>
+        <div class="project-list">
+          <div><h3>ClimateToText <span class="muted">· Fall 2025</span></h3><p data-en>Connected visual features to an LLM for weather-image descriptions; implemented fine-tuning and multi-task learning.</p><p data-ko>기상 이미지 설명 생성을 위한 시각 특징–LLM 연결, Fine-tuning과 Multi-task Learning을 구현했습니다.</p></div>
+          <div><h3>Multimodal Motion Analysis <span class="muted">· Fall 2025</span></h3><p data-en>Extended DeSPITE with embedding visualizations across skeleton, LiDAR, IMU, and text, plus coordinate-aligned SMPL motion evaluation tools.</p><p data-ko>DeSPITE 확장 연구에서 Skeleton·LiDAR·IMU·Text 임베딩 시각화와 좌표계를 정렬한 SMPL 모션 평가 도구를 개발했습니다.</p></div>
+          <div><h3>MADCAMP <span class="muted">· Summer 2021</span></h3><p data-en>Built four team projects in four weeks, covering Android, Node.js/MongoDB backends, and Socket.io multiplayer games.</p><p data-ko>4주 동안 Android 앱, Node.js·MongoDB 백엔드와 Socket.io 멀티플레이 게임을 포함한 네 개 팀 프로젝트를 개발했습니다.</p></div>
+        </div>
       </section>
 
       <section id="education" aria-labelledby="education-title">
@@ -91,8 +120,15 @@
         <div class="cv-row"><div><h3>KAIST</h3><p>M.S. in Computer Science <span class="muted">(expected)</span></p></div><p class="dates">Mar. 2025 – Feb. 2027</p></div>
         <div class="cv-row"><div><h3>KAIST</h3><p>B.S. in Computer Science</p></div><p class="dates">Mar. 2019 – Feb. 2025</p></div>
       </section>
+      <section id="teaching" aria-labelledby="teaching-title">
+        <h2 id="teaching-title">Teaching</h2>
+        <div class="cv-row"><div><h3>Introduction to Programming <span class="muted">· CS101</span></h3><p data-en>Teaching Assistant · 7 semesters</p><p data-ko>조교 · 총 7학기</p><p class="detail" data-en>Python labs, debugging support, and Korean/English student Q&amp;A.</p><p class="detail" data-ko>Python 실습·디버깅 지원과 한국어·영어 질의응답.</p></div><p class="dates">2021 – 2026</p></div>
+        <div class="cv-row"><div><h3 data-en>Intelligent Robot Design</h3><h3 data-ko>지능로봇설계</h3><p data-en>Teaching Assistant</p><p data-ko>조교</p><p class="detail" data-en>Supported LEGO/Raspberry Pi robotics, deep learning, and computer vision labs and team projects.</p><p class="detail" data-ko>LEGO·Raspberry Pi 로봇, 딥러닝·컴퓨터 비전 실습과 팀 프로젝트 지도 지원.</p></div><p class="dates">Spring 2025 &amp; 2026</p></div>
+      </section>
+      <p class="technical"><strong>Tools</strong> Python · PyTorch · JavaScript · TypeScript · React · React Native · Node.js · MongoDB · Git</p>
       <footer><span>© 2026 Taewoo Kim</span><span>Last updated: September 2026</span></footer>
     </main>
     <script src="language.js" defer></script>
-  </body>
-</html>
+  
+
+</body></html>
