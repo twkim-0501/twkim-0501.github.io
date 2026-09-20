@@ -11,3 +11,91 @@ h2{font-size:29px;font-weight:500;line-height:1.3;letter-spacing:-.65px}.researc
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 
 html[lang="ko"] .page{word-break:keep-all;overflow-wrap:break-word}
+
+/* Reading sizes and spacing. Edit these variables to adjust the page. */
+:root {
+  --body-size: 18px;
+  --detail-size: 17px;
+  --meta-size: 15px;
+  --reading-leading: 1.85;
+  --section-space: 68px;
+}
+strong { font-weight: 700; color: var(--ink); }
+.intro { padding-top: 68px; padding-bottom: 43px; }
+.intro-copy > p:not(.intro-line) { font-size: var(--body-size); line-height: var(--reading-leading); margin-bottom: 21px; }
+.intro-copy > .intro-line { font-size: 17px; margin-bottom: 25px; }
+.profile-links { margin-top: 29px; gap: 10px; }
+.social-link { font-size: 15px; padding: 8px 12px; min-height: 42px; }
+.nav-links a { font-size: 15px; }
+.availability { font-size: var(--meta-size); padding: 16px 19px; }
+.portrait-block figcaption, .work-figure figcaption { font-size: 14px; }
+h2 { font-size: 31px; font-weight: 600; }
+.section-heading { margin-bottom: 32px; }
+.research-section, .cv-section { padding-top: var(--section-space); }
+.research-item { gap: 39px; padding-bottom: 43px; }
+.work-copy h3, .text-research h3 { font-size: 24px; line-height: 1.45; font-weight: 650; }
+.work-meta { font-size: 14px; margin-bottom: 13px; }
+.work-description { font-size: var(--body-size); line-height: var(--reading-leading); margin-top: 18px; max-width: 64ch; }
+.contribution { font-size: var(--detail-size); line-height: var(--reading-leading); margin-top: 18px; }
+.work-actions { margin-top: 23px; gap: 20px; }
+.text-button, .quiet-link, .project-details summary { font-size: 15px; }
+.text-button { padding: 8px 13px; }
+.text-research { padding-top: 36px; padding-bottom: 0; }
+.text-research .work-copy { max-width: 810px; }
+.project-details { margin-top: 22px; }
+.brief-body { margin-top: 23px; }
+.brief-body ol, .brief-body p { font-size: var(--detail-size); line-height: var(--reading-leading); }
+.brief-body li { margin-top: 16px; }
+.cv-section .section-heading { margin-bottom: 20px; }
+.experience-row { padding: 28px 0; gap: 32px; }
+.date { font-size: 14px; padding-top: 4px; }
+.experience-row h3 { font-size: 20px; font-weight: 650; }
+.experience-row h3 span { display: block; margin: 3px 0 0; font-size: 16px; line-height: 1.6; }
+.row-description { font-size: var(--detail-size); line-height: var(--reading-leading); margin-top: 12px; max-width: 65ch; }
+.row-description strong { font-weight: 700; }
+.lower-grid { padding-top: 51px; gap: 55px; }
+.lower-grid h2, .other-projects h2 { font-size: 29px; margin-bottom: 28px; }
+.compact-entry { margin-bottom: 29px; }
+.compact-entry h3 { font-size: 18px; font-weight: 650; }
+.compact-entry p { font-size: var(--detail-size); line-height: 1.8; margin-top: 6px; }
+.compact-entry .muted { font-size: 15px; }
+.other-projects { padding-top: 37px; }
+.small-project-grid { gap: 30px; }
+.small-project-grid > div { padding-top: 21px; }
+.small-project-grid h3 { font-size: 18px; font-weight: 650; }
+.small-project-grid p { font-size: 16px; line-height: 1.85; margin-top: 13px; }
+.small-project-grid .project-year { font-size: 14px; }
+.footer { margin-top: 65px; }
+.footer > div > p, .copyright { font-size: 14px; }
+@media (max-width: 900px) and (min-width: 701px) {
+  .research-item { grid-template-columns: 240px minmax(0,1fr); gap: 28px; }
+  .text-research { display: block; }
+}
+@media (max-width: 700px) {
+  :root { --body-size: 17px; --detail-size: 16px; --meta-size: 14px; --section-space: 49px; }
+  .intro { padding: 36px 0 31px; }
+  .intro-copy > .intro-line { font-size: 14px; line-height: 1.7; margin-bottom: 25px; }
+  .intro-copy > p:not(.intro-line) { margin-bottom: 22px; }
+  .profile-links { margin-top: 8px; gap: 9px; }
+  .social-link { font-size: 15px; padding: 8px 11px; }
+  .nav-links a { font-size: 14px; }
+  .availability { padding: 15px; }
+  h2 { font-size: 29px; }
+  .section-heading { margin-bottom: 27px; }
+  .research-item { gap: 25px; padding-bottom: 35px; }
+  .work-copy h3, .text-research h3 { font-size: 23px; }
+  .work-meta { font-size: 14px; }
+  .text-research { padding-top: 31px; padding-bottom: 0; }
+  .experience-row { padding: 25px 0; gap: 8px; }
+  .experience-row h3 { font-size: 19px; }
+  .experience-row h3 span { font-size: 16px; }
+  .lower-grid { padding-top: 38px; gap: 24px; }
+  .lower-grid h2, .other-projects h2 { font-size: 27px; }
+  .other-projects { padding-top: 24px; }
+  .small-project-grid { gap: 29px; }
+  .footer { margin-top: 47px; }
+}
+@media (max-width: 365px) {
+  .intro-copy > .intro-line { font-size: 13px; }
+  .nav-links { gap: 18px; }
+}
