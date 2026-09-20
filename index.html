@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-language="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="김태우 · Taewoo Kim. KAIST 전산학부 석사과정. Human Motion, 3D Vision, Software Development.">
+    <meta name="theme-color" content="#ffffff">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Taewoo Kim · 김태우">
+    <meta property="og:description" content="KAIST 전산학부 석사과정. Human Motion · 3D Vision · Generative Models. 연구와 소프트웨어 개발 경험을 소개합니다.">
+    <meta property="og:image" content="https://twkim-0501.github.io/profile.jpg">
+    <meta property="og:url" content="https://twkim-0501.github.io/">
+    <link rel="canonical" href="https://twkim-0501.github.io/">
+    <title>김태우 · Taewoo Kim</title>
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a class="skip" href="#research">Skip to research</a>
+    <main class="page">
+      <div class="language" role="group" aria-label="Language / 언어">
+        <button type="button" data-set-lang="en" aria-pressed="true">English</button><span aria-hidden="true">/</span><button type="button" data-set-lang="ko" aria-pressed="false">한국어</button>
+      </div>
+      <header class="intro" id="about">
+        <div class="intro-copy">
+          <h1>Taewoo Kim <span lang="ko">김태우</span></h1>
+          <p data-en>I am an M.S. student in Computer Science at <a href="https://www.kaist.ac.kr/en/">KAIST</a>, working in NMAIL. My research focuses on <strong>human motion, 3D vision, and generative modeling</strong>.</p>
+          <p data-ko>KAIST 전산학부 석사과정 김태우입니다. NMAIL에서 <strong>Human Motion, 3D Vision, Generative Modeling</strong>을 연구하고 있습니다.</p>
+          <p data-en>I develop diffusion models that generate 3D hand motion from body movement. I have also worked on sparse-IMU motion estimation and character animation, alongside frontend development at HayanMind and SPARCS.</p>
+          <p data-ko>현재는 신체 동작을 조건으로 양손의 3D 손동작을 생성하는 Diffusion 모델을 연구합니다. Sparse IMU 기반 모션 추정·캐릭터 애니메이션 프로젝트와 HayanMind·SPARCS의 프론트엔드 개발에 참여했습니다.</p>
+          <p class="availability" data-en>I expect to graduate in February 2027 and am seeking research and engineering opportunities through Korea’s 전문연구요원 program.</p>
+          <p class="availability" data-ko>2027년 2월 졸업 예정이며, 연구·소프트웨어 개발 분야의 전문연구요원 신규편입 기회를 찾고 있습니다.</p>
+          <nav class="profile-links" aria-label="Contact and documents">
+            <a href="mailto:rlaxodntttt@kaist.ac.kr">Email</a><span>/</span>
+            <a href="https://docs.google.com/document/d/1ZQwDcndkJOWXZhUYfo12_3cw94DOH6qnFQ-OK4ba1Cw/preview" target="_blank" rel="noopener noreferrer">CV<span class="sr-only"> (new tab)</span></a><span>/</span>
+            <a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview" target="_blank" rel="noopener noreferrer">Portfolio<span class="sr-only"> (new tab)</span></a><span>/</span>
+            <a href="https://github.com/twkim-0501" target="_blank" rel="noopener noreferrer">GitHub<span class="sr-only"> (new tab)</span></a><span>/</span>
+            <a href="https://www.linkedin.com/in/taewoo-kim-412846435/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="sr-only"> (new tab)</span></a>
+          </nav>
+        </div>
+        <img class="portrait" src="profile.jpg" width="3000" height="3858" alt="Taewoo Kim" fetchpriority="high">
+      </header>
+
+      <section id="research" aria-labelledby="research-title">
+        <h2 id="research-title">Research</h2>
+        <p class="section-intro" data-en>I am interested in learning expressive human motion and connecting data, models, and working systems. Selected ongoing research and engineering projects are below.</p>
+        <p class="section-intro" data-ko>사람의 움직임을 표현하는 모델과 데이터·시스템을 함께 다룹니다. 현재 진행 중인 연구와 대표 엔지니어링 프로젝트를 소개합니다.</p>
+        <article class="research-row" id="body-to-hands">
+          <figure class="research-figure">
+            <a class="mesh-pair" href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pf_qual" target="_blank" rel="noopener noreferrer" aria-label="View hand generation results in portfolio">
+              <div><img src="body-input.png" width="220" height="340" alt="Body motion input: taking a photo"><span>Body input</span></div>
+              <div><img src="hand-generation.png" width="560" height="560" alt="Generated left-hand pose from the physical model"><span>Generated hand</span></div>
+            </a>
+            <figcaption>Body-to-hand motion generation</figcaption>
+          </figure>
+          <div class="research-copy">
+            <h3><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_03" target="_blank" rel="noopener noreferrer">Learning What Matters in Body Motion for Hand Generation</a></h3>
+            <p class="subtitle">Structured Kinematics and Body-Derived Semantics</p>
+            <p class="research-meta"><strong>Taewoo Kim</strong> · KAIST NMAIL</p>
+            <p class="research-status">Ongoing research, 2025–present <span>· Manuscript in preparation</span></p>
+            <p class="description" data-en>Generating wrist and finger motion with structured joint, body-part, and temporal cues. Current work explores body-derived semantic conditioning and transfer to text-conditioned hand generation.</p>
+            <p class="description" data-ko>관절·신체 부위·시간 범위별 단서를 활용해 손목과 손가락의 움직임을 생성합니다. 신체 동작에서 추론한 의미 정보와 텍스트 조건을 활용하는 생성 방식으로 확장하고 있습니다.</p>
+            <p class="work-links"><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_03" target="_blank" rel="noopener noreferrer">Overview</a><span>/</span><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pf_qual" target="_blank" rel="noopener noreferrer">Results</a></p>
+          </div>
+        </article>
+        <article class="research-row" id="imu-animation">
+          <figure class="research-figure">
+            <a class="motion-figure" href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.p2b_stability" target="_blank" rel="noopener noreferrer" aria-label="View IMU motion comparison in portfolio"><img src="imu-motion.png" width="720" height="640" loading="lazy" alt="K-IMU motion comparison: pretrained model and translation fine-tuning"></a>
+            <figcaption>IMU-based motion estimation</figcaption>
+          </figure>
+          <div class="research-copy">
+            <h3><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_08" target="_blank" rel="noopener noreferrer">From Sparse IMU Sensors to 2D/3D Character Animation</a></h3>
+            <p class="research-meta">KAIST NMAIL · Team project</p>
+            <p class="research-status">Research engineering, 2024–2025</p>
+            <p class="description" data-en>Worked on sensor calibration and synchronization, motion-model adaptation, and motion refinement. Connected motion representations to pose-guided video generation and contributed to 3D character animation.</p>
+            <p class="description" data-ko>센서 보정·동기화, 동작 추정 모델 적응과 모션 보정을 수행했습니다. 모션 표현을 포즈 조건부 영상 생성에 연결하고 3D 캐릭터 애니메이션 개발에 참여했습니다.</p>
+            <p class="work-links"><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.pt_slide_08" target="_blank" rel="noopener noreferrer">Overview</a><span>/</span><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.p2b_stability" target="_blank" rel="noopener noreferrer">Motion results</a><span>/</span><a href="https://docs.google.com/presentation/d/1nIFV15HnCN-vleL8b9FRSvytptB9SqYljUewhY3od-Y/preview#slide=id.p2x_2dtrain" target="_blank" rel="noopener noreferrer">Animation</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section id="experience" aria-labelledby="experience-title">
+        <h2 id="experience-title">Experience</h2>
+        <div class="cv-row"><div><h3>KAIST NMAIL</h3><p data-en>Graduate Researcher <span class="muted">· Undergraduate research from Sep. 2024</span></p><p data-ko>석사과정 연구 <span class="muted">· 2024년 9월부터 학부 연구 참여</span></p></div><p class="dates">Sep. 2024 – Present</p></div>
+        <div class="cv-row"><div><h3>HayanMind <span class="muted">/ RedKiwi</span></h3><p>Frontend Developer · Intern &amp; Part-time</p><p class="detail" data-en>React Native UI development and JavaScript-to-TypeScript migration.</p><p class="detail" data-ko>React Native 앱 UI 개발과 JavaScript → TypeScript 전환.</p></div><p class="dates">Dec. 2021 – Jun. 2022</p></div>
+        <div class="cv-row"><div><h3>SPARCS <span class="muted">/ KAIST TAXI</span></h3><p>Frontend Developer</p><p class="detail" data-en>React-based account, settings, and chat features. Rejoined in Fall 2023.</p><p class="detail" data-ko>React 기반 마이페이지·설정·채팅 개발. 2023년 가을 재참여.</p></div><p class="dates">Fall 2021 – Spring 2022<br>Fall 2023</p></div>
+      </section>
+
+      <section id="education" aria-labelledby="education-title">
+        <h2 id="education-title">Education</h2>
+        <div class="cv-row"><div><h3>KAIST</h3><p>M.S. in Computer Science <span class="muted">(expected)</span></p></div><p class="dates">Mar. 2025 – Feb. 2027</p></div>
+        <div class="cv-row"><div><h3>KAIST</h3><p>B.S. in Computer Science</p></div><p class="dates">Mar. 2019 – Feb. 2025</p></div>
+      </section>
+      <footer><span>© 2026 Taewoo Kim</span><span>Last updated: September 2026</span></footer>
+    </main>
+    <script src="language.js" defer></script>
+  </body>
+</html>
